@@ -5,11 +5,7 @@
  * @return {Boolean}
  */
 function sameFirst(a, b) {
-  if (a[0] ===  b[0]) {
-    return true;
-  } else {
-    return false;
-  }
+  return a[0] === b[0];
 }
 
 /**
@@ -19,13 +15,11 @@ function sameFirst(a, b) {
  * @return {Boolean}
  */
 function deepEquals(a, b) {
+  if (a.length != b.length) {
+    return false;
+  }
   for (i = 0; i < a.length; i++) {
-    if (a.length != b.length) {
-      return false;
-    }
-    if (a[i] === b[i]) {
-    }
-    else {
+    if (a[i] !=b[i]) {
       return false;
     }
   }

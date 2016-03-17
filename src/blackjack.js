@@ -53,11 +53,10 @@ function shouldSplit(cardOne, cardTwo) {
  * @return {Boolean}
  */
 function shouldHit(cardOne, cardTwo) {
-  if (sum(cardValue(cardOne), cardValue(cardTwo)) < 17) {
-    return true;
-  }
-  else if (cardOne === cardTwo) {
+  if (cardOne === cardTwo) {
     return false;
+  }  else if (sum(cardValue(cardOne), cardValue(cardTwo)) < 17) {
+    return true;
   }
   else if (sum(cardValue(cardOne), cardValue(cardTwo)) >= 17) {
     return false;

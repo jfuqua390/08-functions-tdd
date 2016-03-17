@@ -21,7 +21,7 @@ function aliveNeighbors(neighbors) {
  * @return {Boolean}
  */
 function aliveEh(neighbors) {
-  if (aliveNeighbors(neighbors) === 0) {
+  if (aliveNeighbors(neighbors) < 2) {
     return false;
   }
   if (aliveNeighbors(neighbors) < 4) {
