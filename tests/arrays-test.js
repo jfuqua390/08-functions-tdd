@@ -7,11 +7,11 @@ test(`It can check first values`, function(assert) {
   const d = sameFirst(['d', true], ['b', false]);
   const e = sameFirst(['d', true], ['c', false, 'x']);
 
-  assert.equal(a, true);
-  assert.equal(b, true);
-  assert.equal(c, false);
-  assert.equal(d, false);
-  assert.equal(e, false);
+  assert.equal(a, true, 'It returns true when the first values are the same');
+  assert.equal(b, true, 'It returns true when the first values are the same');
+  assert.equal(c, false, 'It returns false when the first values are different');
+  assert.equal(d, false, 'It returns false when the first values are different');
+  assert.equal(e, false, 'It returns false when the first values are different');
 });
 
 test(`It can check deep equal`, function(assert) {
@@ -21,11 +21,11 @@ test(`It can check deep equal`, function(assert) {
   const d = deepEquals(['d', true], ['z', true]);
   const e = deepEquals(['d', true], ['d', true, 'x']);
 
-  assert.equal(a, true);
-  assert.equal(b, false);
-  assert.equal(c, true);
-  assert.equal(d, false);
-  assert.equal(e, false);
+  assert.equal(a, true, 'It returns true when all the values are the same in both arrays');
+  assert.equal(b, false, 'It returns false when the second item is differet');
+  assert.equal(c, true, 'It returns true when all the values are the same in both arrays');
+  assert.equal(d, false, 'It returns false when ANY item is different');
+  assert.equal(e, false, 'It returns false if the lengths are different');
 });
 
 test(`It can sum up an array`, function(assert) {

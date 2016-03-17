@@ -10,9 +10,9 @@ test('A bot knows a card value', function(assert) {
   const king = cardValue('queen');
 
   assert.equal(ace, 11, 'A bot should know "ace" is equal to 11');
-  assert.equal(five, 5, 'A bot should know "fiv" is equal to 5');
-  assert.equal(nine, 9, 'A bot should know "nin" is equal to 9');
-  assert.equal(ten, 10, 'A bot should know "ten" is equal to 10');
+  assert.equal(five, 5, 'A bot should know "5" is equal to 5');
+  assert.equal(nine, 9, 'A bot should know "9" is equal to 9');
+  assert.equal(ten, 10, 'A bot should know "10" is equal to 10');
   assert.equal(jack, 10, 'A bot should know "jack" is equal to 10');
   assert.equal(queen, 10, 'A bot should know "queen" is equal to 10');
   assert.equal(king, 10, 'A bot should know "king" is equal to 10');
